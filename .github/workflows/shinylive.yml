@@ -29,9 +29,10 @@ jobs:
       
       - name: Build Shinylive App
         env:
-          SUPER_SECRET: ${{ secrets.GMAIL_PASS }}
+          GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
         run: |
           . ./pyenv/bin/activate
+          echo $GMAIL_PASS
           shinylive export contact_form _site
       
       - name: Install rsync
