@@ -60,7 +60,6 @@ app_ui = ui.page_fluid(
                 width="100%",
                 style="background-color:#4caf50; color:white;"
             ),
-            # ui.hr(id="finalBreak"),
             align="justify"
         ),
         ui.column(4)
@@ -71,6 +70,7 @@ app_ui = ui.page_fluid(
 def server(input, output, session):
     @reactive.Calc
     def send_email():
+        user_name = input.userName()
         user_name = input.userName()
         user_phone = input.userPhone()
         user_email = input.userEmail()
