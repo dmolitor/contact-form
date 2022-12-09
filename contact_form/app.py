@@ -5,7 +5,7 @@ from shiny import App, reactive, render, ui
 import smtplib
 
 # Get GMAIL password from GitHub Secrets
-GMAIL_PASS = dict(os.environ)['GMAIL_PASS']
+# GMAIL_PASS = dict(os.environ)['GMAIL_PASS']
 
 app_ui = ui.page_fluid(
     ui.row(
@@ -103,7 +103,7 @@ def server(input, output, session):
             + f"\n{user_message}"
         )
         sender_address = "molitdj97@gmail.com"
-        sender_pass = GMAIL_PASS
+        sender_pass = "bmvhkghdjybscimg"
         receiver_address = "molitdj97@gmail.com"
         message = MIMEMultipart()
         message['From'] = sender_address
