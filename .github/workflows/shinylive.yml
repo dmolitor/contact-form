@@ -1,4 +1,4 @@
-name: "ShinyLive Deployment"
+name: "Shinylive Deployment"
 on:
   push:
     branches:
