@@ -32,7 +32,6 @@ jobs:
           GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
         run: |
           . ./pyenv/bin/activate
-          echo $GMAIL_PASS
           shinylive export contact_form _site
       
       - name: Install rsync
